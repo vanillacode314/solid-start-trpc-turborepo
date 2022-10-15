@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Next.js",
+  "display": "solid-start",
   "extends": "./base.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,8 +15,9 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsxImportSource": "solid-js",
     "jsx": "preserve"
   },
-  "include": ["src", "next-env.d.ts"],
+  "include": ["src", "vite-env.d.ts"],
   "exclude": ["node_modules"]
 }

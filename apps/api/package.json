@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "esbuild index.ts --minify --bundle --platform=node --external:./node_modules/*"
+  },
+  "dependencies": {
+    "@trpc/server": "10.0.0-proxy-beta.20",
+    "node-fetch": "^3.2.10",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.11",
+    "eslint": "^8.25.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.8.4"
+  }
+}

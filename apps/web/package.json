@@ -2,26 +2,32 @@
   "name": "web",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "solid-start dev",
+    "build": "solid-start build",
+    "start": "solid-start start",
+    "lint": "eslint 'src/**'"
   },
   "dependencies": {
-    "next": "12.3.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "@solidjs/meta": "^0.28.0",
+    "@solidjs/router": "^0.5.0",
+    "@trpc/client": "10.0.0-proxy-beta.20",
+    "@trpc/server": "10.0.0-proxy-beta.20",
+    "api": "workspace:*",
+    "solid-js": "^1.5.7",
+    "solid-start": "^0.1.6",
+    "solid-start-node": "^0.1.6",
     "ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "eslint-config-custom": "workspace:*",
-    "eslint": "7.32.0",
-    "next-transpile-modules": "9.0.0",
-    "tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
-    "@types/react": "18.0.17",
-    "typescript": "^4.5.3"
+    "@types/web": "^0.0.75",
+    "eslint": "7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.3",
+    "vite": "^3.1.8"
   }
 }
