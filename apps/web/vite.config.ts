@@ -1,14 +1,11 @@
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
-import fs from "fs";
 import path from "path";
-
-const packageJson = fs.readFileSync("./package.json");
-const version = JSON.parse(packageJson.toString()).version;
+import packageJson from "./package.json" assert { type: "json" };
 
 export default defineConfig({
   define: {
-    __version__: JSON.stringify(version),
+    __version__: JSON.stringify(packageJson.version),
   },
   resolve: {
     alias: {
