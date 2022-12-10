@@ -8,12 +8,12 @@
     "lint": "eslint *.ts*"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.29.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
-    "typescript": "^4.5.2"
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "solid-js": "^1.5.7"
+    "solid-js": "^1.6.4"
   }
 }
