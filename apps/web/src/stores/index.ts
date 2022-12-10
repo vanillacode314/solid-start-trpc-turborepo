@@ -2,6 +2,6 @@ import { createStore } from "solid-js/store";
 
 interface IAppState {}
 
-const appStore = createStore<IAppState>({});
+const [appState, setAppState] = createStore<IAppState>({});
 
-export const useAppState = () => appStore;
+export const useAppState = () => [appState, setAppState] as const;
