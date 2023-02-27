@@ -1,11 +1,11 @@
-import solid from "solid-start/vite";
 import { defineConfig } from "vite";
+import solid from "solid-start/vite";
 import path from "path";
-import packageJson from "./package.json" assert { type: "json" };
+import pkgJson from "./package.json";
 
 export default defineConfig({
   define: {
-    __version__: JSON.stringify(packageJson.version),
+    __version__: JSON.stringify(pkgJson.version),
   },
   resolve: {
     alias: {

@@ -1,12 +1,12 @@
-import { Show, createResource, createSignal } from "solid-js";
-import { trpc } from "~/client";
+import { Show, createResource, createSignal } from 'solid-js'
+import { trpc } from '~/client'
 
 export default function Home() {
-  const [input, setInput] = createSignal<string>("");
+  const [input, setInput] = createSignal<string>('')
   const [pokemon] = createResource<
     Awaited<ReturnType<typeof trpc.getPokemon.query>>,
     string
-  >(input, () => trpc.getPokemon.query(input()));
+  >(input, () => trpc.getPokemon.query(input()))
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function Home() {
           type="text"
           value={input()}
           onKeyDown={(e) =>
-            e.key === "Enter" && setInput(e.currentTarget.value)
+            e.key === 'Enter' && setInput(e.currentTarget.value)
           }
         />
         <button onClick={() => {}}>Search</button>
@@ -24,5 +24,5 @@ export default function Home() {
         <p>Got Pokemon {pokemon().name}</p>
       </Show>
     </>
-  );
+  )
 }

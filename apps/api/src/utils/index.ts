@@ -1,7 +1,7 @@
 export function getKeys<
   T extends Record<any, any> = any,
   Key extends keyof T = any
->(obj: T, keys: readonly Key[]): Pick<T, typeof keys[number]> {
+>(obj: T, keys: readonly Key[]): Pick<T, (typeof keys)[number]> {
   return Object.fromEntries(
     keys.map((key) => [key, obj[key]]).filter(([key, val]) => Boolean(val))
   );
